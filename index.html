@@ -1,4 +1,4 @@
-// 2017년 트랜스포머 어텐션 시각화 등 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -518,33 +518,115 @@
 
       /* 반응형 디자인 */
       @media (max-width: 768px) {
+        body {
+          font-size: 15px;
+        }
         .main-title {
-          font-size: 2rem;
+          font-size: 2.2rem;
+        }
+        .subtitle {
+          font-size: 1rem;
+        }
+        .header {
+          padding: 30px 15px;
+        }
+        .timeline-container {
+          padding: 30px 10px;
         }
         .timeline-line {
-          left: 20px;
+          left: 30px;
         }
         .timeline-item:nth-child(odd) .timeline-content,
         .timeline-item:nth-child(even) .timeline-content {
-          margin-left: 60px;
-          margin-right: 20px;
+          margin-left: 70px;
+          margin-right: 10px;
           text-align: left;
         }
         .timeline-year {
-          left: 20px;
-          width: 60px;
-          height: 60px;
+          left: 30px;
+          width: 55px;
+          height: 55px;
+          font-size: 0.8rem;
+        }
+        .timeline-content {
+          padding: 20px;
+        }
+        .event-title {
+          font-size: 1.3rem;
+        }
+        .event-description {
           font-size: 0.9rem;
         }
-
         .neuron-visual {
           flex-direction: column;
+          gap: 10px;
         }
-
         .connection {
           width: 3px;
           height: 40px;
           margin: 10px 0;
+        }
+        .attention-matrix,
+        #scalingChart div,
+        #agiInfo div,
+        .compare-popup .content > div,
+        .capabilities-popup .content > div {
+          grid-template-columns: 1fr !important;
+        }
+        .multimodal-demo {
+          grid-template-columns: 1fr 1fr;
+        }
+        .llm-process,
+        .neuron-simulator,
+        .transformer-demo,
+        .chat-interface {
+          padding: 15px;
+        }
+        .demo-button,
+        .chat-input button {
+          padding: 10px 15px;
+          font-size: 14px;
+        }
+        .eliza-popup > div,
+        .compare-popup > div,
+        .capabilities-popup > div,
+        .creative-popup > div {
+          max-width: 90vw;
+          padding: 20px;
+          max-height: 90vh;
+        }
+
+        /* Inputs and Buttons */
+        input[type='text'],
+        .chat-input input,
+        .llm-process input,
+        .transformer-demo input {
+          font-size: 14px;
+          padding: 12px;
+          height: auto;
+          width: 100%;
+        }
+        .chat-input {
+          flex-direction: column;
+        }
+        .chat-input button {
+          width: 100%;
+        }
+        .close-btn {
+          width: 28px;
+          height: 28px;
+          font-size: 14px;
+        }
+        label {
+          font-size: 14px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 10px;
+          gap: 8px;
+        }
+        input[type='range'] {
+          width: 180px;
         }
       }
 
